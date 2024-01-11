@@ -1,0 +1,30 @@
+<html>
+
+<script>
+
+function delaysum(){
+    let timeout;
+    clearTimeout(timeout);
+
+    setTimeout(function(req,res){
+        sum()
+    },1000);
+
+}
+
+    function sum(){
+        let a = document.getElementById("1").value;
+        let b = document.getElementById("2").value;
+        const ele = document.getElementById("finalsum");
+        ele.innerHTML= parseInt(a)+parseInt(b);
+    }
+</script>
+
+    <body>
+        <input oninput="delaysum()" id="1" type="text" placeholder="First number"></input><br></br>
+        <input oninput="delaysum()" id ="2" type="text" placeholder="Second number"></input><br></br>
+        <button onclick="sum()">Calculate sum</button><br><br>
+        <div id="finalsum"></div>
+
+    </body>
+</html>
